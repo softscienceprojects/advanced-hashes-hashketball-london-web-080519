@@ -235,7 +235,6 @@ def most_points_scored
 
  def winning_team
   #which team has the most points
-   answer = "Brooklyn Nets"
    homepoints = 0
    game_hash[:home][:players].select do |k,v|
     homepoints += k[:points]
