@@ -248,9 +248,20 @@ def most_points_scored
    homepoints > awaypoints ? game_hash[:home][:team_name] : game_hash[:away][:team_name]
  end
 
-def player_with_longest_name
-
-end
+ def player_with_longest_name
+  #which player has longest name
+   answer = nil
+   memo = 0
+   game_hash.values.each do |a|
+   a[:players].select do |k,v|  
+   if k[:player_name].length > memo
+     memo = k[:player_name].length
+     answer = k[:player_name]
+   end
+   end
+   end
+   p answer
+ end
 
 def long_name_steals_a_ton
 
