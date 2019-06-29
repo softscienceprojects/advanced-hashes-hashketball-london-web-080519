@@ -233,9 +233,21 @@ def most_points_scored
    p answer
  end
 
-def winning_team
+ def winning_team
+  #which team has the most points
+   answer = "Brooklyn Nets"
+   homepoints = 0
+   game_hash[:home][:players].select do |k,v|
+    homepoints += k[:points] 
+   end
+   
+   awaypoints = 0
+   game_hash[:away][:players].select do |k,v|
+    awaypoints += k[:points]
+   end
 
-end
+   homepoints > awaypoints ? game_hash[:home][:team_name] : game_hash[:away][:team_name]
+ end
 
 def player_with_longest_name
 
