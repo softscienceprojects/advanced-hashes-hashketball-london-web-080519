@@ -145,7 +145,7 @@ def shoe_size(name)
    game_hash.values.each do |a| #for each of the top-level hashes (home,away)
      a[:players].select do |k,v| #select from the players key it's key-values
        if k[:player_name] == name #if the key player name is the same as name
-       shoe = k[:shoe] #then we want the value in points
+       shoe = k[:shoe] #then we want the value in shoe
        end
      end
    end
