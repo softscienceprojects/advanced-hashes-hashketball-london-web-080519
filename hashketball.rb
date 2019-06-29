@@ -220,8 +220,6 @@ end
 
 def most_points_scored
   #which player has the most points
-    #find player with largest shoe size
-   #return player's number of rebounds
    answer = nil
    memo = 0
    game_hash.values.each do |a|
