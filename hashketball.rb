@@ -263,6 +263,18 @@ def most_points_scored
    p answer
  end
 
-def long_name_steals_a_ton
+ def long_name_steals_a_ton
+   #returns true if player with longest name has the most steals
 
-end
+   answer = nil
+   memo = 0
+   game_hash.values.each do |a|
+   a[:players].select do |k,v|  
+   if k[:steals] > memo 
+     memo = k[:steals]
+     answer = k[:player_name]
+   end
+   end
+   end
+   answer == player_with_longest_name
+ end
