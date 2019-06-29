@@ -165,8 +165,8 @@ end
 
 def team_names
  #operates on game_hash to
-
  # return array of team names
+ game_hash.map{|a,b| p b[:team_name]}
 end
 
 def player_numbers(team_name)
