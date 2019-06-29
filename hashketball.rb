@@ -128,11 +128,11 @@ end
 
 #repl you lifesaver
 def num_points_scored(name)
-points = nil
- game_hash.values.each do |a|
-   a[:players].select do |k,v|
-     if k[:player_name] == name
-     points = k[:points]
+points = nil  #start off declaring the variable to store your answer
+ game_hash.values.each do |a| #for each of the top-level hashes (home,away)
+   a[:players].select do |k,v| #select from the players key it's key-values
+     if k[:player_name] == name #if the key player name is the same as name
+     points = k[:points] #then we want the value in points
      end
    end
  end
