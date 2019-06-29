@@ -238,9 +238,9 @@ def most_points_scored
    answer = "Brooklyn Nets"
    homepoints = 0
    game_hash[:home][:players].select do |k,v|
-    homepoints += k[:points] 
+    homepoints += k[:points]
    end
-   
+
    awaypoints = 0
    game_hash[:away][:players].select do |k,v|
     awaypoints += k[:points]
