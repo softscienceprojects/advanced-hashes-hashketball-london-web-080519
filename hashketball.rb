@@ -206,7 +206,7 @@ def big_shoe_rebounds
   #find player with largest shoe size
   #return player's number of rebounds
   answer = nil
-  memo = 0 #as you need to compare numbers to numbers, set as 0 
+  memo = 0 #as you need to compare numbers to numbers, set as 0
   game_hash.values.each do |a|
   a[:players].select do |k,v|
   if k[:shoe] > memo #compare the shoe to the memo, think this is similar to reduce
