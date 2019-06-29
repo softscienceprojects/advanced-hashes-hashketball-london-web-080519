@@ -219,8 +219,21 @@ def big_shoe_rebounds
 end
 
 def most_points_scored
-
-end
+  #which player has the most points
+    #find player with largest shoe size
+   #return player's number of rebounds
+   answer = nil
+   memo = 0
+   game_hash.values.each do |a|
+   a[:players].select do |k,v|  
+   if k[:points] > memo 
+     memo = k[:points]
+     answer = k[:player_name]
+   end
+   end
+   end
+   p answer
+ end
 
 def winning_team
 
