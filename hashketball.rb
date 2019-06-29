@@ -184,16 +184,16 @@ def player_stats(name)
   #returns hash of that players stats
 pstats = {}
  game_hash.values.each do |a|
-  a[:players].select do |k,v|  
+  a[:players].select do |k,v|
     if k[:player_name] == name
     pstats = {
-      :assists=>k[:assists], 
-      :blocks=>k[:blocks], 
-      :number=>k[:number], 
-      :points=> k[:points], 
-      :rebounds=>k[:rebounds], 
-      :shoe=>k[:shoe], 
-      :slam_dunks=>k[:slam_dunks], 
+      :assists=>k[:assists],
+      :blocks=>k[:blocks],
+      :number=>k[:number],
+      :points=> k[:points],
+      :rebounds=>k[:rebounds],
+      :shoe=>k[:shoe],
+      :slam_dunks=>k[:slam_dunks],
       :steals=>k[:steals]
       }
     end
