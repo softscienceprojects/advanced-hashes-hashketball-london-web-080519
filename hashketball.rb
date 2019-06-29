@@ -171,7 +171,13 @@ end
 
 def player_numbers(team_name)
   #returns array of jersey numbers for that team
-
+b=[]
+ game_hash.values.each do |a|
+    if a[:team_name] == team_name
+    b = a[:players].map {|a| a[:number]}
+    end
+end
+b
 end
 
 def player_stats(name)
