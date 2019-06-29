@@ -253,7 +253,7 @@ def most_points_scored
    answer = nil
    memo = 0
    game_hash.values.each do |a|
-   a[:players].select do |k,v|  
+   a[:players].select do |k,v|
    if k[:player_name].length > memo
      memo = k[:player_name].length
      answer = k[:player_name]
