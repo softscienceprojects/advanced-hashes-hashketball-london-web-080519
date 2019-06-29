@@ -130,20 +130,13 @@ end
 def num_points_scored(name)
 points = nil
  game_hash.values.each do |a|
- # myvar = a[:players].map {|h| h.dig(:player_name)}.include?(name)
- #a[:players].map{|h| h.dig(:player_name)}.index(name)
-
-a[:players].select do |k,v|
- if k[:player_name] == name
- points = k[:points]
+   a[:players].select do |k,v|
+     if k[:player_name] == name
+     points = k[:points]
+     end
+   end
  end
-end
-# v.include?(name)}
-#.keys.map {|x| x.to_s}
- # myvar = a[:players].select {|e| e[:player_name] == name }
-  #p myvar
- end
- points
+points
 end
 
 def shoe_size(name)
