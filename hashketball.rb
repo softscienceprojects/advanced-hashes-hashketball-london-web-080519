@@ -141,6 +141,15 @@ end
 
 def shoe_size(name)
   #return their shoe size
+  shoe = nil  #start off declaring the variable to store your answer
+   game_hash.values.each do |a| #for each of the top-level hashes (home,away)
+     a[:players].select do |k,v| #select from the players key it's key-values
+       if k[:player_name] == name #if the key player name is the same as name
+       shoe = k[:shoe] #then we want the value in points
+       end
+     end
+   end
+  shoe
 end
 
 def team_colors(team_name)
