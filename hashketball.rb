@@ -208,8 +208,8 @@ def big_shoe_rebounds
   answer = nil
   memo = 0
   game_hash.values.each do |a|
-  a[:players].select do |k,v|  
-  if k[:shoe] > memo 
+  a[:players].select do |k,v|
+  if k[:shoe] > memo
     memo = k[:shoe]
     answer = k[:rebounds]
   end
